@@ -9,9 +9,10 @@ export default class Index extends Component {
 
   async componentDidMount () {
     try {
-      await request({
+      const result = await request({
         url: 'https://cnodejs.org/api/v1/topic/5433d5e4e737cbe96dcef312'
       })
+      console.log('result => ', result)
     } catch (error) {
       console.error('error => ', error)
     }
